@@ -48,9 +48,15 @@ The Linux instructions were tested with Ubuntu 18.04. They should work with othe
 # Use
 ## Demo with Camera
   * run "python DEEPLAB_DEMO.py" to test out model.pb live (uses the first available camera)
-  
+    - WARNING: this may be very slow
+    - if the console window is printing allocation errors, try closing other programs to free up RAM
+
 ## Training
   * copy images into the TrainingImages folder
   * copy labels in to the TrainingLabels folder
   * run "bash TRAIN.sh" (Linux) or "TRAIN.bat" (Windows)
     - creates/overwrites "model.pb" after it finishes training
+
+# TODO
+  * add instructions for training/running with GPU (CUDA and CuDNN installation)
+  * add instructions for converting to an ONNX model
