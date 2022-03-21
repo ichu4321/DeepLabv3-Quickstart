@@ -1,0 +1,8 @@
+# ignore model files
+*.pb
+
+# ignore image files
+*.jpg
+*.jpeg
+*.png
+
