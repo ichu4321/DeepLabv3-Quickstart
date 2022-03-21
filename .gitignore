@@ -6,3 +6,5 @@
 *.jpeg
 *.png
 
+# ignore pycache files
+*.pyc
