@@ -55,8 +55,12 @@ The Linux instructions were tested with Ubuntu 18.04. They should work with othe
   * copy images into the TrainingImages folder
   * copy labels in to the TrainingLabels folder
   * run "bash TRAIN.sh" (Linux) or "TRAIN.bat" (Windows)
-    - creates/overwrites "model.pb" after it finishes training
+    * NOTE: you should change the NUM_EPOCHS and NUM_CLASSES variables in the scripts
+      * NUM_EPOCHS tells the script how many rounds of training you want (checkpoints are saved every 10 epochs)
+      * NUM_CLASSES is the number of different classes you have (including a background class)
+    * creates/overwrites "model.pb" after it finishes training
 
 # TODO
   * add instructions for training/running with GPU (CUDA and CuDNN installation)
   * add instructions for converting to an ONNX model
+  * add detailed instruction for creating Pascal-styled labels
