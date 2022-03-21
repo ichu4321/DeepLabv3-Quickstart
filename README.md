@@ -30,11 +30,27 @@ The Linux instructions were tested with Ubuntu 18.04. They should work with othe
     - "pip install --upgrade pip"
     - "pip install -r requirements_python36_ubuntu18.txt"
 
+## All Systems
+  * Download the model checkpoint from Tensorflow's model zoo
+    - http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz
+  * extract the files
+    - Windows users will need 7zip (https://www.7-zip.org) to extract
+  * there should be these files in the extracted folder
+    - frozen_inference_graph.pb
+    - model.ckpt.data-00000-of-00001
+    - model.ckpt.index
+  * rename and move these files to the BaseCheckpoint folder
+    - "model.ckpt.data-00000-of-00001" renamed "base.ckpt.data-00000-of-00001"
+    - "model.ckpt.index" renamed "base.ckpt.index"
+  * rename and move this file to the base directory of the repository (same location as the TRAIN scripts)
+    - "frozen_inference_graph.pb" renamed "model.pb"
+
 # Use
+## Demo with Camera
+  * run "python DEEPLAB_DEMO.py" to test out model.pb live (uses the first available camera)
+  
+## Training
   * copy images into the TrainingImages folder
   * copy labels in to the TrainingLabels folder
   * run "bash TRAIN.sh" (Linux) or "TRAIN.bat" (Windows)
-    - creates "model.pb" after it finishes training
-  * run "python DEEPLAB_DEMO.py" to test it out live (uses the first available camera)
-
-
+    - creates/overwrites "model.pb" after it finishes training
