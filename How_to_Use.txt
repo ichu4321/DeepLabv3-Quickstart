@@ -1,12 +1,20 @@
 # Steps to Install
-	-- install Python 3.6
-	-- create and activate a new virtual environment
-	-- install the python requirements
-		- For Linux: "pip install -r requirements_python36_ubuntu18.txt"
-		- For Windows: "pip install -r requirements_python36_windows10.txt"
+	- For Linux: 
+		- install Python 3.6
+		- "python3 venv ~/deeplab"
+		- "source ~/deeplab/bin/activate"
+		- "pip install --upgrade pip"
+		- "pip install -r requirements_python36_ubuntu18.txt"
+
+	- For Windows: 
+		- install Anaconda3
+		- "conda create --name deep"
+		- "conda activate deep"
+		- "conda install python=3.6"
+		- "pip install -r requirements_python36_windows10.txt"
 
 # Steps to Train
-	-- Copy images into the TrainingImages folder
+	-- copy images into the TrainingImages folder
 	-- copy labels into the TrainingLabels folder
 	-- run "bash TRAIN.sh" (Linux) or "TRAIN.bat" (Windows)
 		- creates "model.pb" after a few minutes
